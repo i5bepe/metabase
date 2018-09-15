@@ -109,7 +109,8 @@ export function label(label) {
 
 export function publicQuestion(uuid, type = null) {
   const siteUrl = MetabaseSettings.get("site_url");
-  return `${siteUrl}/public/question/${uuid}` + (type ? `.${type}` : ``);
+  return `${siteUrl}/api/public/card/${uuid}/query/` + (type ? `${type}` : ``);
+  //return `${siteUrl}/public/question/${uuid}` + (type ? `.${type}` : ``);
 }
 
 export function publicDashboard(uuid) {
